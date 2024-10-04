@@ -1,0 +1,14 @@
+# For details on buf.yaml configuration, visit https://buf.build/docs/configuration/v2/buf-yaml
+version: v2
+modules:
+    - path: proto/foo
+    - path: proto/bar
+      excludes:
+        - proto/bar/a
+        - proto/bar/b/f.proto
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE
